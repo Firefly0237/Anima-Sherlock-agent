@@ -1,0 +1,12 @@
+{"schema_version":"sherlock.spoiler_term.v1","case_id":"speckled_band","spoiler_id":"spb.sp.final_creature","terms":["蛇","毒蛇","沼泽蝰蛇","swamp adder","serpent"],"allowed_stage":"solution","severity":"block"}
+{"schema_version":"sherlock.spoiler_term.v1","case_id":"speckled_band","spoiler_id":"spb.sp.creature_method","terms":["用蛇杀人","训练蛇攻击","放蛇进房间","让蛇爬到床上"],"allowed_stage":"solution","severity":"block"}
+{"schema_version":"sherlock.spoiler_term.v1","case_id":"speckled_band","spoiler_id":"spb.sp.ventilator_path","terms":["通风口送入危险动物","从通风口进入房间","通风口是路径"],"allowed_stage":"solution","severity":"repair"}
+{"schema_version":"sherlock.spoiler_term.v1","case_id":"speckled_band","spoiler_id":"spb.sp.rope_bridge","terms":["铃绳是桥","铃绳让动物到床边","假铃绳是通道"],"allowed_stage":"solution","severity":"repair"}
+{"schema_version":"sherlock.spoiler_term.v1","case_id":"speckled_band","spoiler_id":"spb.sp.fixed_bed","terms":["床被固定为了对准","固定床让路径稳定"],"allowed_stage":"hypothesis","severity":"warn"}
+{"schema_version":"sherlock.spoiler_term.v1","case_id":"speckled_band","spoiler_id":"spb.sp.safe","terms":["保险柜里藏着危险动物","保险柜里藏蛇","safe 里藏动物"],"allowed_stage":"solution","severity":"block"}
+{"schema_version":"sherlock.spoiler_term.v1","case_id":"speckled_band","spoiler_id":"spb.sp.milk","terms":["牛奶训练","用牛奶召回","牛奶喂蛇"],"allowed_stage":"solution","severity":"block"}
+{"schema_version":"sherlock.spoiler_term.v1","case_id":"speckled_band","spoiler_id":"spb.sp.whistle","terms":["口哨召回","哨声控制动物","低哨召唤"],"allowed_stage":"solution","severity":"repair"}
+{"schema_version":"sherlock.spoiler_term.v1","case_id":"speckled_band","spoiler_id":"spb.sp.roylott_final","terms":["Roylott 被自己的动物反噬","Roylott 被蛇咬死","继父死于自己的手法"],"allowed_stage":"solution","severity":"block"}
+{"schema_version":"sherlock.spoiler_term.v1","case_id":"speckled_band","spoiler_id":"spb.sp.gypsy_false","terms":["不是吉普赛人","吉普赛人是误导","头巾不是答案"],"allowed_stage":"hypothesis","severity":"warn"}
+{"schema_version":"sherlock.spoiler_term.v1","case_id":"speckled_band","spoiler_id":"spb.sp.full_chain","terms":["继父为了遗产用通风口假铃绳固定床和毒蛇杀人","Roylott 用危险动物通过通风口进入房间"],"allowed_stage":"solution","severity":"block"}
+{"schema_version":"sherlock.spoiler_term.v1","case_id":"speckled_band","spoiler_id":"spb.sp.unsafe_howto","terms":["怎么训练蛇攻击人","怎么用动物害人","如何制造密室杀人"],"allowed_stage":"post_case","severity":"block"}

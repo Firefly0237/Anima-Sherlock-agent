@@ -1,0 +1,83 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "anima-sherlock-agent"
+version = "0.1.0"
+description = "Source-grounded Sherlock Holmes dialogue agent with post-training, tools, and memory."
+readme = "README.md"
+license = "Apache-2.0"
+authors = [{ name = "Tingxuan Su" }]
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+test = [
+    "fastapi==0.115.12",
+    "httpx==0.28.1",
+    "pytest>=8.0",
+    "pyyaml==6.0.2",
+    "tqdm>=4.66",
+]
+dev = [
+    "fastapi==0.115.12",
+    "httpx==0.28.1",
+    "pytest>=8.0",
+    "pyyaml==6.0.2",
+    "ruff>=0.12,<1",
+    "tqdm>=4.66",
+]
+train = [
+    "accelerate==1.14.0",
+    "bitsandbytes==0.49.2",
+    "datasets==4.7.0",
+    "huggingface-hub==1.5.0",
+    "peft==0.19.1",
+    "tokenizers==0.22.2",
+    "torch==2.7.1",
+    "transformers==5.14.1",
+    "trl==1.8.0",
+]
+serve = [
+    "fastapi==0.115.12",
+    "httpx==0.28.1",
+    "psycopg[binary]==3.3.4",
+    "psycopg-pool==3.3.1",
+    "pyyaml==6.0.2",
+    "sentence-transformers==5.6.0",
+    "uvicorn==0.30.6",
+]
+model-serve = [
+    "accelerate==1.14.0",
+    "bitsandbytes==0.49.2",
+    "fastapi==0.115.12",
+    "huggingface-hub==1.5.0",
+    "peft==0.19.1",
+    "pyyaml==6.0.2",
+    "tokenizers==0.22.2",
+    "torch==2.7.1",
+    "transformers==5.14.1",
+    "uvicorn==0.30.6",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"anima.case_game.runtime" = [
+    "web/*.css",
+    "web/*.js",
+    "web/*.html",
+    "web/*.md",
+    "web/assets/*.jpg",
+]
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
+
+[tool.ruff.format]
+line-ending = "lf"

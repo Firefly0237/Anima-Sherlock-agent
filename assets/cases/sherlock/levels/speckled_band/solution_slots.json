@@ -1,0 +1,88 @@
+{
+  "schema_version": "sherlock.solution_slots.v1",
+  "case_id": "speckled_band",
+  "pass_threshold": 0.8,
+  "required_slots": [
+    {
+      "slot_id": "spb.slot.motive",
+      "label": "Roylott 有阻止继女结婚的经济动机",
+      "feedback_label": "经济动机",
+      "weight": 2,
+      "aliases": ["遗产", "收入", "结婚会减少 Roylott 的钱", "为了钱", "经济动机", "阻止继女结婚损失收入", "动机来自遗产"],
+      "match_groups": [["遗产", "收入", "钱", "经济"], ["结婚", "婚姻", "继女"]],
+      "visibility": "hidden_truth"
+    },
+    {
+      "slot_id": "spb.slot.responsible_party",
+      "label": "Roylott 是案件责任人，Julia 的临终动作指向他的房间",
+      "feedback_label": "责任人",
+      "weight": 1,
+      "aliases": ["Roylott 是凶手", "继父是凶手", "凶手是 Roylott", "Roylott 用", "继父", "他有责任", "指向 Roylott"],
+      "match_groups": [["Roylott", "罗伊洛特", "继父"], ["凶手", "责任", "作案", "使用", "安排", "送入"]],
+      "visibility": "hidden_truth"
+    },
+    {
+      "slot_id": "spb.slot.repeat_risk",
+      "label": "Helen 面临与 Julia 类似的重复风险",
+      "feedback_label": "重复威胁",
+      "weight": 1,
+      "aliases": ["同样危险", "重复 Julia 的遭遇", "Julia 的遭遇", "姐姐旧事重演", "重蹈 Julia", "同样哨声"],
+      "match_groups": [["Helen", "海伦", "妹妹", "继女"], ["Julia", "朱莉娅", "姐姐"], ["同样", "重复", "重演", "类似"]],
+      "visibility": "hidden_truth"
+    },
+    {
+      "slot_id": "spb.slot.forced_room",
+      "label": "维修/换房把 Helen 安排进 Julia 的房间",
+      "feedback_label": "换房安排",
+      "weight": 2,
+      "aliases": ["维修是借口", "借维修让 Helen 住进 Julia 的房间", "搬进 Julia 的房间", "故意换房", "换房把 Helen 固定到同一危险位置", "安排她睡那张床"],
+      "match_groups": [["维修", "换房", "搬入", "安排"], ["Julia", "朱莉娅", "死者", "同一房间", "固定床"]],
+      "visibility": "hidden_truth"
+    },
+    {
+      "slot_id": "spb.slot.locked_room_exclusion",
+      "label": "门窗烟囱等普通入口被排除",
+      "feedback_label": "密室排除",
+      "weight": 1,
+      "aliases": ["门窗锁住", "门窗都不能解释危险", "窗户进不来", "烟囱也不通", "密室", "危险进入房间"],
+      "match_groups": [["门窗", "窗户", "烟囱", "外部"], ["排除", "无法", "不能", "锁住", "进不来", "密室"]],
+      "visibility": "hidden_truth"
+    },
+    {
+      "slot_id": "spb.slot.object_chain",
+      "label": "通风口、假铃绳、固定床、保险柜、牛奶碟、短鞭构成物证链",
+      "feedback_label": "房间物证链",
+      "weight": 3,
+      "aliases": ["通风口", "假铃绳", "固定床", "保险柜", "牛奶碟", "牛奶", "短鞭", "房间改造", "房间之间的连接", "床边布置", "物证链", "路径"],
+      "match_groups": [["通风口"], ["铃绳", "拉绳"], ["固定床", "床固定", "床位"]],
+      "visibility": "hidden_truth"
+    },
+    {
+      "slot_id": "spb.slot.dangerous_animal",
+      "label": "斑点带子是 Roylott 控制的毒蛇",
+      "feedback_label": "危险来源",
+      "weight": 3,
+      "aliases": ["危险动物", "危险物", "真实危险", "印度动物", "蛇", "毒蛇", "斑点带子是动物"],
+      "match_groups": [["危险动物", "动物", "蛇", "毒蛇", "活物"]],
+      "visibility": "hidden_truth"
+    },
+    {
+      "slot_id": "spb.slot.signal_pattern",
+      "label": "低哨声与金属声是夜间控制和收束线索",
+      "feedback_label": "声音信号",
+      "weight": 1,
+      "aliases": ["哨声", "口哨", "金属声", "金属物件", "夜间声音", "控制并收回", "召回", "保险柜"],
+      "match_groups": [["哨声", "口哨"], ["金属声", "金属碰撞", "金属容器", "收回", "召回"]],
+      "visibility": "hidden_truth"
+    },
+    {
+      "slot_id": "spb.slot.false_leads",
+      "label": "吉普赛人与 band 一词是误导，不能解释全部物证",
+      "feedback_label": "误导项排除",
+      "weight": 1,
+      "aliases": ["不是吉普赛人", "吉普赛说法解释不了", "斑点带子不是吉普赛人", "头巾不是答案", "band 是误导", "斑点带子不是一伙人"],
+      "match_groups": [["吉普赛", "头巾", "band", "一伙人"], ["误导", "不是", "不能解释", "排除"]],
+      "visibility": "hidden_truth"
+    }
+  ]
+}

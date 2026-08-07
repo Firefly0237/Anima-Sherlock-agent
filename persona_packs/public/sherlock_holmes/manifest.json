@@ -1,0 +1,14 @@
+{
+  "persona_id": "sherlock_holmes",
+  "version": "0.2.2",
+  "language": "zh-CN",
+  "license": {
+    "name": "CC-BY-4.0",
+    "source": "derived from the public-domain Sherlock Holmes canon (Arthur Conan Doyle)"
+  },
+  "public": true,
+  "content_sha256": "501aea2aceadb12668994cc156dd2082fe40741772c56e4378f2aa13e9485f2b",
+  "knowledge_cutoff": "1891年4月24日晚（赴欧陆之前）",
+  "created_by": "curated",
+  "human_reviewed": false
+}

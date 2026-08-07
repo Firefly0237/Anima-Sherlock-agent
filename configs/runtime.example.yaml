@@ -1,0 +1,36 @@
+run_mode: pilot
+
+database:
+  dsn: postgresql://anima:anima@localhost:5433/anima
+
+embedding:
+  backend: bge
+  model_id: BAAI/bge-small-zh-v1.5
+  revision: 7999e1d3359715c523056ef9478215996d62a620
+  device: cpu
+
+model:
+  base_url: http://127.0.0.1:8000
+  base_model: Qwen/Qwen3.6-27B
+  base_model_revision: 6a9e13bd6fc8f0983b9b99948120bc37f49c13e9
+  adapter_id: YOUR_HF_USERNAME/anima-sherlock-qwen3.6-27b-dpo-lora
+  adapter_sha256: null
+  temperature: 0.0
+  top_p: 1.0
+  max_tokens: 384
+  upstream_stream: true
+
+retrieval:
+  lore_enabled: true
+  memory_enabled: true
+  lore_top_k: 8
+  memory_top_k: 5
+  lore_min_score: null
+  memory_min_score: null
+
+runtime:
+  memory_write_enabled: true
+  max_history_turns: 12
+  max_input_chars: 2000
+  max_format_retries: 1
+  max_citation_retries: 1

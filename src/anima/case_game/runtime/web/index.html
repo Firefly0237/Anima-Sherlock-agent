@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <title>Sherlock Case Desk</title>
+  <link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand-block">
+      <img class="book-cover" src="/static/adventures-cover.jpg" alt="《福尔摩斯探案集》公版封面">
+      <div>
+        <p class="brand-kicker">Baker Street · Case Files</p>
+        <h1><span>Sherlock</span><span class="brand-tail"> Case Desk</span></h1>
+      </div>
+    </div>
+    <div class="header-actions">
+      <span id="runtime-badge" class="runtime-badge">正在核验运行时</span>
+      <button id="reset-button" class="quiet-button icon-button" type="button" aria-label="重开当前案件" title="重开当前案件" disabled>&#8635;</button>
+      <button id="export-button" class="quiet-button" type="button" disabled>导出记录</button>
+    </div>
+  </header>
+
+  <main class="workspace">
+    <aside class="case-rail" aria-label="案件列表">
+      <div class="section-heading">
+        <p>Scotland Yard Registry</p>
+        <h2>案件档案</h2>
+      </div>
+      <div id="case-list" class="case-list" aria-live="polite"></div>
+    </aside>
+
+    <section class="play-panel" aria-label="案件对话">
+      <div class="case-masthead">
+        <div>
+          <p id="case-eyebrow" class="case-eyebrow">等待选择案卷</p>
+          <h2 id="case-title">贝克街，221B</h2>
+          <p id="case-objective" class="case-objective">请选择左侧案件。</p>
+        </div>
+        <div class="stage-block">
+          <span>调查阶段</span>
+          <strong id="stage-label">未开始</strong>
+        </div>
+      </div>
+
+      <div class="progress-row" aria-label="案件进度">
+        <div class="progress-track" aria-hidden="true">
+          <span id="progress-fill"></span>
+        </div>
+        <span id="progress-label">0 / 0 条线索</span>
+      </div>
+
+      <section class="lead-strip" aria-label="可执行线索">
+        <div class="lead-heading">
+          <strong>可执行线索</strong>
+          <span id="lead-count">0 项</span>
+        </div>
+        <div id="lead-list" class="lead-list" aria-live="polite">
+          <p class="lead-empty">开启案卷后显示。</p>
+        </div>
+      </section>
+
+      <div id="dialogue-log" class="dialogue-log" aria-live="polite">
+        <div class="empty-state">
+          <span class="monogram" aria-hidden="true">SH</span>
+          <p>案卷尚未开启。</p>
+        </div>
+      </div>
+
+      <form id="turn-form" class="turn-composer">
+        <div id="action-control" class="action-control" role="group" aria-label="行动类型">
+          <button type="button" data-action="auto" class="is-selected">自动判断</button>
+          <button type="button" data-action="ask">提问</button>
+          <button type="button" data-action="inspect">检查</button>
+          <button type="button" data-action="hypothesize">假设</button>
+          <button type="button" data-action="hint">提示</button>
+          <button type="button" data-action="solve">结案</button>
+          <button type="button" data-action="recap">复盘</button>
+        </div>
+        <div class="input-row">
+          <label class="sr-only" for="player-input">本轮行动内容</label>
+          <textarea id="player-input" rows="3" maxlength="2000" placeholder="向福尔摩斯提出一个可检验的问题" disabled></textarea>
+          <button id="submit-button" class="primary-button" type="submit" disabled>提交行动</button>
+        </div>
+        <p id="turn-status" class="turn-status" role="status"></p>
+      </form>
+    </section>
+
+    <aside class="evidence-panel" aria-label="案件资料">
+      <div class="evidence-tabs" role="tablist" aria-label="案件资料视图">
+        <button id="evidence-tab" class="is-selected" type="button" role="tab" aria-selected="true" data-view="evidence">证据板</button>
+        <button id="timeline-tab" type="button" role="tab" aria-selected="false" data-view="timeline">时间线</button>
+      </div>
+      <div class="evidence-summary">
+        <span id="evidence-count">0 条可见线索</span>
+        <span id="hint-tier">提示 0 级</span>
+      </div>
+      <div id="evidence-content" class="evidence-content">
+        <p class="panel-empty">暂无案件资料。</p>
+      </div>
+    </aside>
+  </main>
+
+  <noscript>此界面需要启用 JavaScript。</noscript>
+  <script src="/static/app.js" defer></script>
+</body>
+</html>

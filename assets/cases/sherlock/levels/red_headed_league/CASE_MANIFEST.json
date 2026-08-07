@@ -1,0 +1,93 @@
+{
+  "schema_version": "sherlock.case_manifest.v1",
+  "created_at": "2026-07-28",
+  "case_id": "red_headed_league",
+  "case_prefix": "rhl.",
+  "status": "release_ready",
+  "title_zh": "红发会",
+  "title_en": "The Red-Headed League",
+  "source_gate": {
+    "manifest": "assets/cases/sherlock/sources/gutenberg_1661/SOURCE_GATE_MANIFEST.v1.json",
+    "sha256": "7c504cb9d133ad7d4997f1594683fcc8b3412beb1ab370680e8c1641ab312cc1",
+    "source_file_sha256": "b9c105a5c0cf9fcb37c7d0211658851ed56074519c9455d15e20f04c0c5a3174",
+    "story_range": {
+      "start_line": 1134,
+      "end_line_exclusive": 2170
+    }
+  },
+  "schema_contract": {
+    "path": "assets/cases/sherlock/CASE_GAME_SCHEMA_CONTRACT.v1.md",
+    "sha256": "db77934f8b567a150c0f81e96308e7f6c9c1d97adb2ba9b230c5962433c8950b",
+    "status": "active"
+  },
+  "files": {
+    "CASE_BIBLE.md": "564ddfae0a912389b0db92372e520c1f4066ac84177c2768c2fc1eaf452c0e67",
+    "characters.jsonl": "ee7a4582e62f19069a182fc8575fb2702ce1e7d7ef4ea44cbfce2d4a4b9a28cd",
+    "contradictions.jsonl": "32b5b0570128a6cea41aeb4aa6789bdfaf775ccf361981fcd76b5e420b9bc6ca",
+    "eval_cases.jsonl": "81ce847f21dac4bfa33dcabf1dcc9fff7e7b3419c0b648d8b10d534236d3f315",
+    "evidence_cards.jsonl": "24f460fb348285d620ef3949ab01165ac93804b3c60c4fc803c24c44f0ccf80d",
+    "game_pack.json": "0706fed9f32786bbdc91e897c597435cecb5286f82ad41a18429d15220164b44",
+    "hints.jsonl": "206b8e59c30961cc0afeffb7e4e9e7f1c824d8ef4719213a1bde6ee14b43b55c",
+    "hypothesis_rules.jsonl": "709814423a894d00c4c0b13f26232ae813e76a7696b03cb493fecd6ed0b34f8b",
+    "LICENSE.md": "fce485662859a1a12886ff08ffb0fdb1aff6634855400c8f18b621b4910611df",
+    "question_intents.jsonl": "37ebefee775ea8a95262716b1ee4ff89bca1759dfe7c98924ae4abc07aeabba8",
+    "reveal_policy.json": "3b6eb21a263eabefde701503a4c6f3613dc4f645442ee408f8bd6083af5c29fd",
+    "solution_slots.json": "93062f44a69c44e510a64d8792a5132b8def556c88414619595fad108d8f288e",
+    "SOURCES.md": "72f10866f77e2472c621865d4c5a7dfd4716a0b084c9951ecc4ab4644067bb44",
+    "spoiler_terms.jsonl": "c8e46b1d0eb8bb67b5520cbeb37daf4c4f5f65ab2499da99eb6566bdd80d702b",
+    "timeline.jsonl": "80864e4d4fa996ecd822c2422e6cbbc7066d193cc207432f341f66f88e3da6f0"
+  },
+  "row_counts": {
+    "evidence_cards": 15,
+    "timeline": 11,
+    "characters": 7,
+    "question_intents": 23,
+    "hypothesis_rules": 14,
+    "contradictions": 8,
+    "hints": 4,
+    "solution_slots": 6,
+    "spoiler_terms": 9,
+    "eval_cases": 60
+  },
+  "minimum_gate": {
+    "evidence_cards_min_12": true,
+    "timeline_min_8": true,
+    "characters_min_5": true,
+    "question_intents_min_20": true,
+    "hypothesis_rules_min_8": true,
+    "contradictions_min_6": true,
+    "hints_min_3": true,
+    "solution_slots_min_5": true,
+    "spoiler_terms_min_8": true,
+    "eval_cases_min_60": true
+  },
+  "validation": {
+    "json_parse": "pass",
+    "jsonl_parse": "pass",
+    "reference_validation": "pass",
+    "case_prefix_validation": "pass",
+    "cross_case_reference_policy": "pass_current_case_only",
+    "third_party_translation_used": false,
+    "training_authorized": false,
+    "agentic_rl_authorized": false
+  },
+  "playability_contract": {
+    "actions_covered": [
+      "ask",
+      "inspect",
+      "hypothesize",
+      "hint",
+      "solve",
+      "recap"
+    ],
+    "opening_goal_defined": true,
+    "truth_slots_defined": true,
+    "spoiler_terms_defined": true,
+    "scripted_eval_rows_defined": true
+  },
+  "design_notes": [
+    "This first level is intentionally a tutorial-level mystery: it has a clear decoy, a clean displacement mechanic, physical/location clues, and a final solution slot structure.",
+    "The case pack keeps the model away from hidden truth until solve/post_case while still giving the DPO model rich NPC duties: hinting, rebuttal, recap, and final deduction.",
+    "No training data construction is authorized by this level manifest."
+  ]
+}

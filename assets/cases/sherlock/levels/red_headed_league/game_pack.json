@@ -1,0 +1,46 @@
+{
+  "schema_version": "sherlock.case_game_pack.v1",
+  "case_id": "red_headed_league",
+  "case_prefix": "rhl.",
+  "title_zh": "红发会",
+  "title_en": "The Red-Headed League",
+  "difficulty": 1,
+  "source_id": "gutenberg_1661",
+  "source_line_range": {
+    "start_line": 1134,
+    "end_line_exclusive": 2170
+  },
+  "allowed_actions": [
+    "ask",
+    "inspect",
+    "hypothesize",
+    "hint",
+    "solve",
+    "recap",
+    "reset"
+  ],
+  "initial_stage": "premise",
+  "initial_evidence_ids": [
+    "rhl.ev.001",
+    "rhl.ev.002",
+    "rhl.ev.003",
+    "rhl.ev.007"
+  ],
+  "win_condition": "required_solution_slots_matched",
+  "player_role": "Watson or trainee investigator",
+  "model_role": "Sherlock Holmes as in-character case host and deduction partner",
+  "blocked_external_terms": [
+    "spb.",
+    "斑点带子",
+    "stoke moran",
+    "Julia Stoner",
+    "Helen Stoner",
+    "Roylott",
+    "继父",
+    "通风口",
+    "铃绳",
+    "毒蛇"
+  ],
+  "final_recap_requirements": [],
+  "training_authorized": false
+}

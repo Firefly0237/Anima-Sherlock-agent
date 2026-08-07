@@ -1,0 +1,96 @@
+{
+  "schema_version": "sherlock.case_manifest.v1",
+  "created_at": "2026-07-28",
+  "case_id": "speckled_band",
+  "case_prefix": "spb.",
+  "status": "release_ready",
+  "title_zh": "斑点带子",
+  "title_en": "The Adventure of the Speckled Band",
+  "source_gate": {
+    "manifest": "assets/cases/sherlock/sources/gutenberg_1661/SOURCE_GATE_MANIFEST.v1.json",
+    "sha256": "7c504cb9d133ad7d4997f1594683fcc8b3412beb1ab370680e8c1641ab312cc1",
+    "source_file_sha256": "b9c105a5c0cf9fcb37c7d0211658851ed56074519c9455d15e20f04c0c5a3174",
+    "story_range": {
+      "start_line": 6782,
+      "end_line_exclusive": 7921
+    }
+  },
+  "schema_contract": {
+    "path": "assets/cases/sherlock/CASE_GAME_SCHEMA_CONTRACT.v1.md",
+    "sha256": "db77934f8b567a150c0f81e96308e7f6c9c1d97adb2ba9b230c5962433c8950b",
+    "status": "active"
+  },
+  "files": {
+    "CASE_BIBLE.md": "b060568c856dc0462561a5ade5f12cea782aa148629f6cc8dd940dbfce0f9484",
+    "characters.jsonl": "f6cd55ba65414b29429d2a209cf4520293f8b0ee1cc0c597fff86d5b609e2738",
+    "contradictions.jsonl": "16527004cd1c38dd265473c26cc1d2c623c25cad09df63fe75c4a86a0cdab90c",
+    "eval_cases.jsonl": "891df0dba8afc6418d0b0e38eb4dc3ca2ddcf72c8c0fbf15cb5a602662865208",
+    "evidence_cards.jsonl": "2ac55912cdd24d9138d61b48d64a8f2182027a67686d704a3588ac91da4869fb",
+    "game_pack.json": "1bd0cc85ff05b116c034c268782c45afb4004906de24cad8040a2a1933b5569e",
+    "hints.jsonl": "29ef1b019f74d975129e44498b8f30ecef89c1c3ce521206c0140f4e4dd1a5ff",
+    "hypothesis_rules.jsonl": "d67454c1e8562cf38375fbfdcfa45064b7ea54fae2863df09a45cb00af059f46",
+    "LICENSE.md": "c589df7c1bfbf7343f276110e52df0b8f2ffcc4ce12e5366ae2937d5ec1a3f75",
+    "question_intents.jsonl": "f31aeb02194157bfd0b5e6e76d0f7f7273694d422b87334c8b58156d13381f15",
+    "reveal_policy.json": "f401fafa914d120822c527890b51f21b90f90d5d4e2eff6f1440d5e872078f97",
+    "solution_slots.json": "a381940045db0bd2d05905dd87cd8094ee0abd68fd4e26223724e2dd0333ee7d",
+    "SOURCES.md": "56a553d98fdb2832eff978131c8d1d1db7b32049a3243f8e04490073a31be3be",
+    "spoiler_terms.jsonl": "bc9b121eeb0c43c9af1f2d9462d9f6203eebb35eeba8fbbdb08ecbb4dbe8f706",
+    "timeline.jsonl": "288c56b493e92730f48500e26ae600b24e83aff4a576af6c7335e29a4895ee49"
+  },
+  "row_counts": {
+    "evidence_cards": 20,
+    "timeline": 13,
+    "characters": 8,
+    "question_intents": 24,
+    "hypothesis_rules": 17,
+    "contradictions": 8,
+    "hints": 4,
+    "solution_slots": 9,
+    "spoiler_terms": 12,
+    "eval_cases": 60
+  },
+  "minimum_gate": {
+    "evidence_cards_min_12": true,
+    "timeline_min_8": true,
+    "characters_min_5": true,
+    "question_intents_min_20": true,
+    "hypothesis_rules_min_8": true,
+    "contradictions_min_6": true,
+    "hints_min_3": true,
+    "solution_slots_min_5": true,
+    "spoiler_terms_min_8": true,
+    "eval_cases_min_60": true
+  },
+  "validation": {
+    "json_parse": "pass",
+    "jsonl_parse": "pass",
+    "reference_validation": "pass",
+    "case_prefix_validation": "pass",
+    "cross_case_reference_policy": "pass_current_case_only",
+    "dangerous_method_boundary": "canonical_literary_reveal_plus_operational_refusal",
+    "third_party_translation_used": false,
+    "training_authorized": false,
+    "agentic_rl_authorized": false
+  },
+  "playability_contract": {
+    "actions_covered": [
+      "ask",
+      "inspect",
+      "hypothesize",
+      "hint",
+      "solve",
+      "recap"
+    ],
+    "opening_goal_defined": true,
+    "truth_slots_defined": true,
+    "spoiler_terms_defined": true,
+    "scripted_eval_rows_defined": true,
+    "advanced_safety_boundary_defined": true
+  },
+  "design_notes": [
+    "This second level is intentionally more complex than the tutorial case: it adds locked-room exclusion, repeating-risk pressure, misleading wording, object-chain reasoning, and a direct canonical final reveal.",
+    "The responsible-party slot is explicit because multiple early clues point to Roylott without revealing the physical method; this keeps hypothesis scoring separate from final spoiler exposure.",
+    "The final literary truth names the snake and canonical evidence chain directly; separate real-world operational harm requests remain outside the playable contract and are refused by runtime policy.",
+    "No training data construction, formal training, or agentic RL is authorized by this level manifest."
+  ]
+}

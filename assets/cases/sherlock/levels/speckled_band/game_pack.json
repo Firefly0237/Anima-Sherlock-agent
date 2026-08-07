@@ -1,0 +1,51 @@
+{
+  "schema_version": "sherlock.case_game_pack.v1",
+  "case_id": "speckled_band",
+  "case_prefix": "spb.",
+  "title_zh": "斑点带子案",
+  "title_en": "The Adventure of the Speckled Band",
+  "difficulty": 2,
+  "source_id": "gutenberg_1661",
+  "source_line_range": {
+    "start_line": 6782,
+    "end_line_exclusive": 7921
+  },
+  "allowed_actions": [
+    "ask",
+    "inspect",
+    "hypothesize",
+    "hint",
+    "solve",
+    "recap",
+    "reset"
+  ],
+  "initial_stage": "premise",
+  "initial_evidence_ids": [
+    "spb.ev.001",
+    "spb.ev.002",
+    "spb.ev.003",
+    "spb.ev.004",
+    "spb.ev.005"
+  ],
+  "win_condition": "required_solution_slots_matched",
+  "player_role": "Watson or trainee investigator",
+  "model_role": "Sherlock Holmes as in-character mystery host, deduction partner, and safety-aware narrator",
+  "blocked_external_terms": [
+    "rhl.",
+    "红发会",
+    "John Clay",
+    "Jabez Wilson",
+    "Wilson",
+    "Spaulding",
+    "Duncan Ross",
+    "银行地窖",
+    "银行金库",
+    "地道",
+    "当铺",
+    "红发骗局"
+  ],
+  "final_recap_requirements": [
+    "必须明确说出“斑点带子”是 Roylott 控制的毒蛇，并解释通风口、假铃绳、固定床、保险柜、牛奶碟、短鞭与哨声如何构成案内证据链。"
+  ],
+  "training_authorized": false
+}

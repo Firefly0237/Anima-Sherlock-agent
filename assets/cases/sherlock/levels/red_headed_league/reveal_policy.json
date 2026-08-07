@@ -1,0 +1,101 @@
+{
+  "schema_version": "sherlock.reveal_policy.v1",
+  "case_id": "red_headed_league",
+  "stages": [
+    "premise",
+    "investigation",
+    "hypothesis",
+    "solution",
+    "post_case"
+  ],
+  "stage_order": {
+    "premise": 0,
+    "investigation": 1,
+    "hypothesis": 2,
+    "solution": 3,
+    "post_case": 4
+  },
+  "default_stage": "premise",
+  "solution_stage": "solution",
+  "model_visible_by_stage": {
+    "premise": [
+      "rhl.ev.001",
+      "rhl.ev.002",
+      "rhl.ev.003",
+      "rhl.ev.007"
+    ],
+    "investigation": [
+      "rhl.ev.001",
+      "rhl.ev.002",
+      "rhl.ev.003",
+      "rhl.ev.004",
+      "rhl.ev.005",
+      "rhl.ev.006",
+      "rhl.ev.007",
+      "rhl.ev.008",
+      "rhl.ev.010"
+    ],
+    "hypothesis": [
+      "rhl.ev.001",
+      "rhl.ev.002",
+      "rhl.ev.003",
+      "rhl.ev.004",
+      "rhl.ev.005",
+      "rhl.ev.006",
+      "rhl.ev.007",
+      "rhl.ev.008",
+      "rhl.ev.009",
+      "rhl.ev.010",
+      "rhl.ev.011",
+      "rhl.ev.012"
+    ],
+    "solution": [
+      "rhl.ev.001",
+      "rhl.ev.002",
+      "rhl.ev.003",
+      "rhl.ev.004",
+      "rhl.ev.005",
+      "rhl.ev.006",
+      "rhl.ev.007",
+      "rhl.ev.008",
+      "rhl.ev.009",
+      "rhl.ev.010",
+      "rhl.ev.011",
+      "rhl.ev.012",
+      "rhl.ev.013",
+      "rhl.ev.014",
+      "rhl.ev.015"
+    ],
+    "post_case": [
+      "rhl.ev.001",
+      "rhl.ev.002",
+      "rhl.ev.003",
+      "rhl.ev.004",
+      "rhl.ev.005",
+      "rhl.ev.006",
+      "rhl.ev.007",
+      "rhl.ev.008",
+      "rhl.ev.009",
+      "rhl.ev.010",
+      "rhl.ev.011",
+      "rhl.ev.012",
+      "rhl.ev.013",
+      "rhl.ev.014",
+      "rhl.ev.015"
+    ]
+  },
+  "spoiler_slots": [
+    "rhl.slot.decoy",
+    "rhl.slot.displacement",
+    "rhl.slot.assistant_is_culprit",
+    "rhl.slot.tunnel_method",
+    "rhl.slot.bank_target",
+    "rhl.slot.timing"
+  ],
+  "stage_transition_notes": [
+    "premise -> investigation after any assistant, office, or identity clue is inspected or asked",
+    "investigation -> hypothesis after cellar/location/knees clue is unlocked",
+    "hypothesis -> solution only after solve action or solve_ready hypothesis",
+    "post_case follows a passed or explicitly revealed solution"
+  ]
+}

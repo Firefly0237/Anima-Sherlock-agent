@@ -1,0 +1,19 @@
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_USER: anima
+      POSTGRES_PASSWORD: anima
+      POSTGRES_DB: anima
+    ports:
+      - "5433:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U anima -d anima"]
+      interval: 3s
+      timeout: 3s
+      retries: 10
+    volumes:
+      - anima_pgdata:/var/lib/postgresql/data
+
+volumes:
+  anima_pgdata:

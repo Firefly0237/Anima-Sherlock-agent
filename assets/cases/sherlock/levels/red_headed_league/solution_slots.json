@@ -1,0 +1,61 @@
+{
+  "schema_version": "sherlock.solution_slots.v1",
+  "case_id": "red_headed_league",
+  "pass_threshold": 0.8,
+  "required_slots": [
+    {
+      "slot_id": "rhl.slot.decoy",
+      "label": "红发会是人为骗局/诱饵",
+      "feedback_label": "骗局性质",
+      "weight": 2,
+      "aliases": ["红发会是骗局", "红发会是诱饵", "协会是假的", "人为安排", "假诱饵", "伪造红发会", "付钱只是诱饵", "引导 Wilson 去红发会"],
+      "match_groups": [["红发会", "协会"], ["骗局", "诱饵", "假的", "伪造", "人为安排", "制造"]],
+      "visibility": "hidden_truth"
+    },
+    {
+      "slot_id": "rhl.slot.displacement",
+      "label": "骗局用于稳定支开 Wilson",
+      "feedback_label": "诱离效果",
+      "weight": 2,
+      "aliases": ["支开 Wilson", "让 Wilson 离开店", "Wilson 离开店", "固定时间离店", "十点到两点不在当铺", "Wilson 不在店", "Wilson 不在店内", "独自在店里", "获得每天上午独自在店里的机会", "骗 Wilson 离开"],
+      "match_groups": [["Wilson", "威尔逊", "店主"], ["支开", "诱离", "骗离", "调离", "离店", "离开店", "不在场", "固定缺席"]],
+      "visibility": "hidden_truth"
+    },
+    {
+      "slot_id": "rhl.slot.assistant_is_culprit",
+      "label": "Spaulding/John Clay 是核心罪犯",
+      "feedback_label": "作案者",
+      "weight": 2,
+      "aliases": ["Spaulding 是罪犯", "助手是罪犯", "John Clay", "Spaulding 就是 John Clay", "助手才是关键", "助手以半薪进店", "助手很可疑", "Spaulding 合作", "Duncan Ross 和 Spaulding 合作", "助手在地下室"],
+      "match_groups": [["Spaulding", "斯波尔丁", "助手", "John Clay"], ["John Clay", "罪犯", "共犯", "同伙", "合谋", "作案", "挖掘", "隧道"]],
+      "visibility": "hidden_truth"
+    },
+    {
+      "slot_id": "rhl.slot.tunnel_method",
+      "label": "地下室/地道是犯罪准备方式",
+      "feedback_label": "作案路径",
+      "weight": 2,
+      "aliases": ["地下通道", "挖地道", "从地下室", "打通地窖", "从地下室通向", "通向银行的通道", "地下室完成通向银行", "从地下室向银行方向行动"],
+      "match_groups": [["地下室", "地窖"], ["地道", "隧道", "通道", "挖掘", "掘进", "挖通"]],
+      "visibility": "hidden_truth"
+    },
+    {
+      "slot_id": "rhl.slot.bank_target",
+      "label": "真正目标是相邻银行及其金库",
+      "feedback_label": "犯罪目标",
+      "weight": 2,
+      "aliases": ["银行", "金库", "City and Suburban Bank", "法国金币", "相邻银行", "店铺后面的银行", "银行方向"],
+      "match_groups": [["银行", "金库", "City and Suburban Bank"]],
+      "visibility": "hidden_truth"
+    },
+    {
+      "slot_id": "rhl.slot.timing",
+      "label": "解散与周六夜行动说明准备完成并需尽快下手",
+      "feedback_label": "行动时机",
+      "weight": 1,
+      "aliases": ["周六", "今晚行动", "准备完成", "骗局结束说明准备完成", "解散说明准备完成", "解散说明不再需要诱饵"],
+      "match_groups": [["解散", "周六", "当晚", "今晚", "立即", "尽快"]],
+      "visibility": "hidden_truth"
+    }
+  ]
+}

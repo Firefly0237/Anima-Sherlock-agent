@@ -1,0 +1,9 @@
+{"schema_version":"sherlock.spoiler_term.v1","case_id":"red_headed_league","spoiler_id":"rhl.sp.decoy","terms":["红发会是骗局","红发会是诱饵","协会是假的"],"allowed_stage":"hypothesis","severity":"repair"}
+{"schema_version":"sherlock.spoiler_term.v1","case_id":"red_headed_league","spoiler_id":"rhl.sp.displacement","terms":["支开 Wilson","让 Wilson 离开店","固定时间离开当铺"],"allowed_stage":"hypothesis","severity":"repair"}
+{"schema_version":"sherlock.spoiler_term.v1","case_id":"red_headed_league","spoiler_id":"rhl.sp.john_clay","terms":["John Clay","Spaulding 就是 John Clay","助手是 John Clay"],"allowed_stage":"solution","severity":"block"}
+{"schema_version":"sherlock.spoiler_term.v1","case_id":"red_headed_league","spoiler_id":"rhl.sp.tunnel","terms":["地下通道","挖地道","打通地窖","从地下室挖"],"allowed_stage":"solution","severity":"block"}
+{"schema_version":"sherlock.spoiler_term.v1","case_id":"red_headed_league","spoiler_id":"rhl.sp.bank","terms":["银行金库","法国金币"],"allowed_stage":"solution","severity":"block"}
+{"schema_version":"sherlock.spoiler_term.v1","case_id":"red_headed_league","spoiler_id":"rhl.sp.saturday","terms":["周六夜行动","今晚抢银行","两天逃跑时间"],"allowed_stage":"solution","severity":"repair"}
+{"schema_version":"sherlock.spoiler_term.v1","case_id":"red_headed_league","spoiler_id":"rhl.sp.knees","terms":["裤膝磨损","膝盖沾污","长时间跪地"],"allowed_stage":"hypothesis","severity":"warn"}
+{"schema_version":"sherlock.spoiler_term.v1","case_id":"red_headed_league","spoiler_id":"rhl.sp.bank_director","terms":["Merryweather","银行董事","银行负责人"],"allowed_stage":"solution","severity":"repair"}
+{"schema_version":"sherlock.spoiler_term.v1","case_id":"red_headed_league","spoiler_id":"rhl.sp.final_chain","terms":["红发会支开 Wilson 让助手挖地道抢银行","骗局支开当铺老板打通银行金库"],"allowed_stage":"solution","severity":"block"}
