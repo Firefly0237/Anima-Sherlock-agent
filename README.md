@@ -3,7 +3,7 @@
 [![CI](https://github.com/Firefly0237/anima-sherlock-agent/actions/workflows/ci.yml/badge.svg)](https://github.com/Firefly0237/anima-sherlock-agent/actions/workflows/ci.yml)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/license-Apache--2.0-green.svg)](LICENSE)
-[![Model](https://img.shields.io/badge/Hugging%20Face-LoRA-yellow.svg)](https://huggingface.co/Firefly0237/anima-sherlock-qwen36-27b-dpo-lora)
+[![Model](https://img.shields.io/badge/Hugging%20Face-LoRA-yellow.svg)](https://huggingface.co/Bot42/anima-sherlock-qwen36-27b-dpo-lora)
 
 Anima is a source-grounded Chinese Sherlock Holmes dialogue agent combining a
 QLoRA-post-trained Qwen model, typed tools, deterministic mystery state, and
